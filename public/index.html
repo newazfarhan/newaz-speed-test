@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Speed Test by Newaz</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="site-header">
+        <div class="logo"><img class="img" src="/images/logo.png" /></div>
+        <div class="site-title">
+          <h1>Speed Test</h1>
+          <p>Simple, Speed-Test UI</p>
+        </div>
+      </header>
+
+      <main class="card">
+        <div class="hero">
+          <div class="left">
+            <p class="headline">Quick network check</p>
+            <p class="sub">
+              Download and upload tests run for 10 seconds. Results computed
+              from bytes transferred.
+            </p>
+
+            <div class="controls">
+              <button id="run" class="primary">Run Test</button>
+              <div style="color: var(--muted); font-size: 13px">
+                Server:
+                <span
+                  id="server-origin-small"
+                  style="color: #dffbf7; font-weight: 700"
+                ></span>
+              </div>
+            </div>
+
+            <div class="stats">
+              <div class="stat-block">
+                <div class="muted">Latency</div>
+                <strong id="latency">— ms</strong>
+              </div>
+
+              <div class="stat-block">
+                <div class="muted">Download</div>
+                <strong id="dl-mbps">— Mbps</strong>
+                <div class="meter"><div id="dl-bar" class="bar"></div></div>
+                <div class="muted" id="dl-details">
+                  Transferred: 0 bytes — 0.0s
+                </div>
+              </div>
+
+              <div class="stat-block">
+                <div class="muted">Upload</div>
+                <strong id="up-mbps">— Mbps</strong>
+                <div class="meter"><div id="up-bar" class="bar"></div></div>
+                <div class="muted" id="up-details">
+                  Transferred: 0 bytes — 0.0s
+                </div>
+              </div>
+            </div>
+
+            <pre id="log">Starting test automatically...</pre>
+          </div>
+
+          <aside class="right">
+            <div
+              style="
+                background: linear-gradient(
+                  180deg,
+                  rgba(255, 255, 255, 0.02),
+                  rgba(255, 255, 255, 0.01)
+                );
+                padding: 14px;
+                border-radius: 10px;
+              "
+            >
+              <h3 style="margin: 0 0 8px 0">About</h3>
+              <p class="muted" style="margin: 0 0 8px 0">
+                This is a speed test UI by newaz.info — a dark, clean card-based
+                UI with teal accent.
+              </p>
+              <p style="margin: 0">
+                <a
+                  href="https://newaz.info/"
+                  target="_blank"
+                  style="color: var(--accent); text-decoration: none"
+                  >Visit newaz.info →</a
+                >
+              </p>
+            </div>
+
+            <div style="height: 12px"></div>
+
+            <div
+              style="
+                background: var(--glass);
+                padding: 12px;
+                border-radius: 10px;
+                text-align: center;
+              "
+            >
+              <div
+                style="font-size: 12px; color: var(--muted); margin-bottom: 8px"
+              >
+                Quick tips
+              </div>
+              <div style="font-weight: 700">
+                Always check your real internet speeds
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <footer class="small">© 2025 Newaz. All rights reserved.</footer>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
